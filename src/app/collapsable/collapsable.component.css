@@ -1,0 +1,42 @@
+.padding-topbottom {
+    animation: padding-animation 300ms ease forwards;
+}
+
+@keyframes padding-animation {
+    0% {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+    100% {
+        padding-top: 5px;
+        padding-bottom: 5px;    
+    }
+}
+
+
+@keyframes paddingbottom-animation {
+    0% {
+        padding-bottom: 0px;
+    }
+    100% {
+        padding-bottom: 5px;    
+    }
+}
+
+.padding-top {
+    animation: paddingtop-animation 300ms ease forwards;
+}
+
+
+@keyframes paddingtop-animation {
+    0% {
+        padding-top: 0px;
+    }
+    100% {
+        padding-top: 5px;
+    }
+}
+
+.padding-bottom {
+    animation: paddingbottom-animation 300ms ease forwards;
+}

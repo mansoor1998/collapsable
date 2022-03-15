@@ -1,0 +1,16 @@
+<div [ngClass]=" { 'padding-bottom': expended && position == 0, 
+                   'padding-topbottom': position && parentLength && expended && position > 0 && position < parentLength - 1,
+                   'padding-top': position && parentLength && expended && position === parentLength - 1 } " >
+  <ng-content select="app-collapsableheader"></ng-content>
+  <div class="collapsable-content"
+       role="region"
+       [@bodyExpansion]="_getExpandedState()"
+       [id]="id"
+       #body style="overflow:hidden;">
+    <div class="mat-expansion-panel-body" style="padding: 10px; background-color: aqua; color:brown">
+      <ng-content></ng-content>
+      <!-- <ng-template [cdkPortalOutlet]="_portal"></ng-template> -->
+    </div>
+    <ng-content select="mat-action-row"></ng-content>
+  </div>
+</div>
